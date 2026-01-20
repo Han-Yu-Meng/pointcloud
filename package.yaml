@@ -4,5 +4,7 @@ description: "Pointcloud algorithm packages"
 maintainers:
   - name: "fins"
     email: "fins@sjtu.edu.cn"
+depends:
+  PCL: "system"
 licenses:
   - "MIT"
