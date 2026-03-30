@@ -11,7 +11,9 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE BOOST_ALLOW_DEPRECATED_HEADER
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${PCL_INCLUDE_DIRS})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE fins_sdk ${PCL_LIBRARIES})
-target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
+target_link_libraries(${PROJECT_NAME} PRIVATE
+	${PCL_LIBRARIES}
+	Threads::Threads
+)
 
 add_definitions(${PCL_DEFINITIONS})
