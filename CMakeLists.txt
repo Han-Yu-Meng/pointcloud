@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
-
 project(pointcloud)
 
-find_package(PCL 1.12 REQUIRED)
+find_package(PCL     REQUIRED)
 find_package(Threads REQUIRED)
 
 fins_add_node(${PROJECT_NAME} nodes.cpp)
