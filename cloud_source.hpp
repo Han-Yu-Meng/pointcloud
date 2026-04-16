@@ -129,7 +129,7 @@ public:
   }
 
   void initialize() override {
-    loaded_cloud_ = std::make_shared<CloudXYZI>();
+    loaded_cloud_.reset(new CloudXYZI());
     is_running_ = false;
   }
 

@@ -147,7 +147,8 @@ static auto plane_segmentation = Function("PlaneSegmentation",
 
     pcl::ExtractIndices<pcl::PointXYZI> extract;
     extract.setInputCloud(*cloud);
-    extract.setIndices(std::make_shared<pcl::PointIndices>(inliers));
+    pcl::PointIndices::Ptr indices_ptr(new pcl::PointIndices(inliers));
+    extract.setIndices(indices_ptr);
     extract.setNegative(false); // true to get non-plane points
     extract.filter(**plane_cloud);
     (*plane_cloud)->header = (*cloud)->header;
