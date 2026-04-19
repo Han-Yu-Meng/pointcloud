@@ -9,4 +9,4 @@
 #include "cloud_source.hpp"
 #include "cloud_process.hpp"
 
-DEFINE_PLUGIN_ENTRY()
+DEFINE_PLUGIN_ENTRY(fins::STATELESS)
